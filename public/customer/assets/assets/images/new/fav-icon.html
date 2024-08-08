@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="csrf-token" content="">
+    <title>Tradesala || DASHBOARD</title>
+    <link rel="icon" type="image/x-icon" href="https://vendor.tradesala.com/assets/images/fav-icon.png">
+    <!-- App css -->
+    <link href="https://vendor.tradesala.com/css/app.css" rel="stylesheet">
+    <link href="https://vendor.tradesala.com/assets/css/iconsmind.css" rel="stylesheet">
+    <link href="https://vendor.tradesala.com/assets/css/themify-icons.css" rel="stylesheet">
+    <!-- <link href="https://vendor.tradesala.com/assets/css/waves-effect.min.css" rel="stylesheet"> -->
+    <link href="https://vendor.tradesala.com/assets/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+        <link href="https://vendor.tradesala.com/assets/css/dashboard.css" rel="stylesheet">
+        <style type="text/css" media="screen">
+        .content-page .content header{
+            margin-left:-15px;
+            margin-right:-15px;
+        }
+        .navbar-custom .button-menu-mobile{
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .navbar-custom .topnav-menu .nav-link{
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .bg-dark-gray{
+            background-color: #383838
+        }
+    </style>
+</head>
+	<style>
+		.logo-bg{
+			width:36px;
+			height:36px;
+		}
+		.tagline{
+			margin-left:38px;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<header class="section-header">
+		<nav class="fixed-header">
+			<div class="container">
+				<a class="navbar-brand pt-3" href="https://vendor.tradesala.com/home"> 
+			        <div class="logo-bg"></div>
+			        <div class="tagline">
+			          <svg xmlns="http://www.w3.org/2000/svg" width="150" height="40" viewBox="0 0 150 40">
+			            <text id="Tradesala" transform="translate(0 25)" fill="#707070" font-size="30" font-family="Josefin Sans" font-weight="300"><tspan x="0" y="0">Tradesala</tspan></text>
+			          </svg>
+			        </div>
+			      
+		      	</a>
+			</div>
+		</nav>
+	</header>
+	<div class="container-fluid">
+
+    
+          
+           
+	  <div class="row mt-lg-3">
+	  	<div class="col-md-12 pt-lg-4">
+	  		<div class="text-center">
+	  			<picture>
+	  				<source srcset="https://vendor.tradesala.com/assets/images/svg/404.svg" type="image/svg+xml">
+  					<img src="https://vendor.tradesala.com/assets/images/svg/404.svg" class="img-fluid mb-3" alt="...">
+  				</picture>
+  				<h4>Oh-Ho! It looks like you found a glitch in the matrix. The Page you are looking for is not found</h4>
+
+  				<a href="#" class="btn btn-primary mt-3 p-2">Back To Home</a>
+
+  			</div>
+  		</div>
+  	</div>
+  </div>
+
+
+
+  
+  <!-- Footer Start -->
+	<footer class="footer position-fixed fixed-bottom">
+	  <div class="container-fluid">
+	    <div class="row">
+	      <div class="col-md-12">
+	        2021 &copy; All Rights are Reserved <a href="">Tradesala.com</a>
+	      </div>
+	    </div>
+	  </div>
+	</footer>
+
+<div class="modal fade" id="webCookieStore" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-header">
+			<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+			</button>
+		</div>
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="js-cookie-consent cookie-consent">
+
+    <span class="cookie-consent__message">
+        Your experience on this site will be improved by allowing cookies.
+    </span>
+
+    <button class="js-cookie-consent-agree cookie-consent__agree">
+        Allow cookies
+    </button>
+
+</div>
+
+				<script>
+					
+					window.laravelCookieConsent = (function () {
+
+						const COOKIE_VALUE = 1;
+						const COOKIE_DOMAIN = 'vendor.tradesala.com';
+
+						function consentWithCookies() {
+							setCookie('laravel_cookie_consent', COOKIE_VALUE, 7300);
+							hideCookieDialog();
+						}
+
+						function cookieExists(name) {
+							return (document.cookie.split('; ').indexOf(name + '=' + COOKIE_VALUE) !== -1);
+						}
+
+						function hideCookieDialog() {
+							const dialogs = document.getElementsByClassName('js-cookie-consent');
+							document.getElementById('webCookieStore').style.display = "none";
+							const body =  document.querySelector('body');
+							body.classList.remove('modal-open');
+
+							for (let i = 0; i < dialogs.length; ++i) {
+								dialogs[i].style.display = 'none';
+							}
+						}
+
+						function setCookie(name, value, expirationInDays) {
+							const date = new Date();
+							date.setTime(date.getTime() + (expirationInDays * 24 * 60 * 60 * 1000));
+							document.cookie = name + '=' + value
+							+ ';expires=' + date.toUTCString()
+							+ ';domain=' + COOKIE_DOMAIN
+							+ ';path=/'
+							+ '';
+						}
+
+						if (cookieExists('laravel_cookie_consent')) {
+							hideCookieDialog();
+						}
+
+						const buttons = document.getElementsByClassName('js-cookie-consent-agree');
+
+						for (let i = 0; i < buttons.length; ++i) {
+							buttons[i].addEventListener('click', consentWithCookies);
+						}
+
+						return {
+							consentWithCookies: consentWithCookies,
+							hideCookieDialog: hideCookieDialog
+						};
+					})();
+				</script>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
